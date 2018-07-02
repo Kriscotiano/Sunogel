@@ -16,7 +16,6 @@ body {
 }
 
 #header .hero-box {
-    position: relative;
     width: 100%;
     z-index: 2;
 }
@@ -32,13 +31,13 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(rgba(255,255,0,0), rgba(0,0,0,1));
+    background: linear-gradient(rgba(255,255,0,0), rgba(0,0,0,.9));
     z-index: 10;
 }
 
 /*Sunogel Logo*/
 #header .logo {
-    height: 75px;
+    height: 76px;
     padding: 15px;
     position: fixed;
     display: flex;
@@ -49,6 +48,10 @@ body {
 #header .logo svg {
     height: 60px;
     transition: .5s;
+}
+
+#header .logo a svg:hover {
+    fill: #ff6500;
 }
 
 /*Hero*/
@@ -64,22 +67,27 @@ body {
 }
 
 #header .hero-box h1 .hero-headline {
-    line-height: 9
+    line-height: 9;
 }
 
 #header .hero-box h1 span {
-    color: orange;
+    color: #ff6500;
 }
 
 /*Js class additions for logo & nav*/
 #header .logo a svg.fill {
-    fill: white;
+    fill: #fff;
     margin-left: 15px;
     transition: .5s;
 }
 
+#header .logo a svg.fill:hover {
+    fill: #ff6500;
+    transition: .1s;
+}
+
 #header nav.nav-js {
-    background: rgba(243, 117, 13, 1);
+    background: rgba(0,0,0,0.9);
     border-bottom: 3px solid #fff;
     transition: .5s;
 }
@@ -87,6 +95,16 @@ body {
 #header nav.main-nav ul li a.nav-item-js {
     color: #fff;
     padding: 0 25px;
+    height: 72px;
+}
+
+#header nav.main-nav ul li a.nav-item-js:hover {
+    color: #fff;
+    border-radius: 5px;
+}
+
+#header nav.main-nav ul li a.nav-item-js:before {
+    border-bottom: transparent;
 }
 
 /*Navigation*/
@@ -97,7 +115,6 @@ body {
     display: flex;
     justify-content: flex-end;
     z-index: 30;
-    transition: .5s;
 }
 
 #header .main-nav .nav-menu {
@@ -114,22 +131,149 @@ body {
 #header .main-nav .nav-menu li a {
     height: 75px;
     padding: 15px;
+    font-size: 20px;
     text-decoration: none;
     color: #000000;
+    position: relative;
     display: flex;
     align-items: center;
     transition: .5s;
 }
 
 #header .main-nav .nav-menu li a:hover {
-    border-bottom: 1px solid #000000;
+    color: #ff6500;
+}
+
+/*Nav border animation*/
+#header .main-nav .nav-menu li a:before {
+    content: '';
+    position: absolute;
+    top: 90%;
+    left: 0;
+    border-bottom: 2px solid transparent;
+}
+
+#header .main-nav .nav-menu li a:hover:before {
+    animation: animate .3s linear forwards;
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+        height: 0;
+        border-bottom-color: transparent;
+    }
+
+    100% {
+        width: 100%;
+        border-bottom-color: #ff6500;
+    }
 }
 
 #header .main-nav .nav-menu li a.nav-item-js:hover {
-    background: rgba(0,0,0,0.8);
+    background: linear-gradient(rgb(180,60,0,1), rgb(200,90,0,1));
+    transition: .1s;
 }
 
+/*Main home page content*/
 body .main-wrapper {
     width: 100%;
-    margin: 0 15px;
+    height: 1000px;
+    background: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,0.6)),#3f3f3f;
+    border-top: solid 6px #fff;
 }
+
+
+/*Home Section 1*/
+body .main-wrapper .section1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+body .main-wrapper .section1-col1 {
+    height: 1000px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body .main-wrapper .section1 .section1-box {
+    width: 700px;
+    height: 600px;
+    padding: 25px;
+}
+
+body .main-wrapper .section1 img {
+    height: 100%;
+    width: 100%;
+}
+
+body .main-wrapper .section1-col2 {
+    height: 1000px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+}
+
+body .main-wrapper .section1-col2 p {
+    font-size: 32px;
+    color: #fff;
+}
+
+/*Home Section 2*/
+body .main-wrapper .section2 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border-top: 6px solid rgb(252, 49, 49);
+
+}
+
+body .main-wrapper .section2-col1 {
+    width: 50%;
+    padding: 25px;
+    font-size: 32px;
+    color: rgb(252, 49, 49);
+    display: flex;
+    align-items: center;
+}
+
+body .main-wrapper .section2-box {
+    padding: 25px;
+}
+
+body .main-wrapper .section2-col1 h2 {
+    text-align: center;
+    font-style: italic;
+}
+
+body .main-wrapper .section2-col1 p {
+    text-align: center;
+}
+
+body .main-wrapper .section2-col2 {
+    height: 1000px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body .main-wrapper .section2-box img {
+    height: 700px;
+    width: 700px;
+    border-radius: 50%;
+}
+
+body .main-wrapper .social-media a .fa {
+    font-size: 60px;
+    color: #000000;
+}
+
+/*Home Section 3 -Social Media*/
+body .main-wrapper .social-media a:hover .fa {
+    color: red;
+} 
