@@ -180,7 +180,6 @@ body .main-wrapper {
     width: 100%;
     height: 1000px;
     background: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,0.6)),#3f3f3f;
-    border-top: solid 6px #fff;
 }
 
 
@@ -189,6 +188,7 @@ body .main-wrapper .section1 {
     height: 100%;
     width: 100%;
     display: flex;
+    border-top: solid 6px #fff;
 }
 
 body .main-wrapper .section1-col1 {
@@ -229,7 +229,6 @@ body .main-wrapper .section2 {
     width: 100%;
     display: flex;
     border-top: 6px solid rgb(252, 49, 49);
-
 }
 
 body .main-wrapper .section2-col1 {
@@ -255,11 +254,13 @@ body .main-wrapper .section2-col1 p {
 }
 
 body .main-wrapper .section2-col2 {
-    height: 1000px;
+    height: 100%;
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: 90px 90px;
+    background-image: linear-gradient(to left, #ededed 1px, transparent 1px), linear-gradient(to bottom, #f6f6f6 1px, transparent 1px);
 }
 
 body .main-wrapper .section2-box img {
@@ -268,12 +269,53 @@ body .main-wrapper .section2-box img {
     border-radius: 50%;
 }
 
-body .main-wrapper .social-media a .fa {
-    font-size: 60px;
-    color: #000000;
+/*Home Section 3 -Social Media*/
+body .main-wrapper .section3 {
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(#bdc3c7, #3f3f3f);
+    display: flex;
+    justify-content: center;
 }
 
-/*Home Section 3 -Social Media*/
-body .main-wrapper .social-media a:hover .fa {
-    color: red;
+.main-wrapper .section3 .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+}
+
+.main-wrapper .section3 .social-media h3 {
+    margin-right: 60px;
+    color: #ededed;
+}
+
+body .main-wrapper .section3 .social-media a {
+    margin: 0 6px;
+}
+
+body .main-wrapper .section3 .social-media a .fa {
+    font-size: 50px;
+    color: #fff;
+}
+
+
+body .main-wrapper .section3 .social-media a:hover .fa {
+    font-size: 57px;
+    transition: .1s;
 } 
+
+/*Footer*/
+.main-wrapper footer {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    background: #000000;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.main-wrapper footer p {
+    margin-left: 50px;
+    color: #f6f6f6;
+}
