@@ -21,3 +21,11 @@ $(window).on('scroll', function() {
         $('#header .main-nav ul li a').removeClass('nav-item-js');
     }
 });
+
+
+$(document).ready(function() {
+    $('.toggle-hamburger').on('click', function() {
+        $('.main-nav ul').toggleClass('active');
+    })
+});
+
