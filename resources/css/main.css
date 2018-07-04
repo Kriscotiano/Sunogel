@@ -39,8 +39,9 @@ body {
 
 /*Sunogel Logo*/
 #header .logo {
-    height: 76px;
-    padding: 15px;
+    height: 75px;
+    padding: 0 15px;
+    line-height: 30px;
     position: fixed;
     display: flex;
     align-items: center;
@@ -48,8 +49,13 @@ body {
 }
 
 #header .logo svg {
-    height: 60px;
+    height: 50px;
     transition: .5s;
+}
+
+#header .logo a {
+    display: flex;
+    align-items: center;
 }
 
 #header .logo a svg:hover {
@@ -65,15 +71,12 @@ body {
     color: #fff;
     z-index: 15;
     font-weight: 500;
-    font-size: 42px;
-}
-
-#header .hero-box h1 .hero-headline {
-    line-height: 9;
+    font-size: 1.6em;
 }
 
 #header .hero-box h1 span {
     color: #ff6500;
+    line-height: 9;
 }
 
 /*Js class additions for logo & nav*/
@@ -132,7 +135,6 @@ body {
 #header .main-nav .nav-menu li a {
     height: 75px;
     padding: 15px;
-    font-size: 20px;
     text-decoration: none;
     color: #000000;
     position: relative;
@@ -173,7 +175,6 @@ body {
 
 #header .main-nav .nav-menu li a.nav-item-js:hover {
     background: linear-gradient(rgb(180,60,0,1), rgb(200,90,0,1));
-    transition: .1s;
 }
 
 
@@ -205,87 +206,86 @@ body .main-wrapper {
 /*Home Section 1*/
 .main-wrapper .section1 {
     height: 100%;
-    width: 100%;
-    display: flex;
     border-top: solid 6px #fff;
-}
-
-.main-wrapper .section1-col1 {
-    height: 100%;
-    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 25px;
 }
 
 .main-wrapper .section1 .section1-box {
-    width: 700px;
     height: 600px;
-    padding: 25px;
-}
-
-.main-wrapper .section1 img {
-    height: 100%;
     width: 100%;
+    padding: 25px; 
+    display: flex;
+    justify-content: space-around;
 }
 
-.main-wrapper .section1-col2 {
-    height: 100%;
-    width: 50%;
+.main-wrapper .section1 .section1-box .flex-item {
+    height: 600px;
+    width: 800px;
+    font-size: 1.4em;
     display: flex;
     align-items: center;
-    padding: 25px;
 }
 
-.main-wrapper .section1-col2 p {
-    font-size: 30px;
+.main-wrapper .section1 .section1-box img {
+    padding: 15px;
+}
+
+.main-wrapper .section1 .section1-box p {
     color: #fff;
+    padding: 15px;
+    width: 100%;
 }
 
 /*Home Section 2*/
 .main-wrapper .section2 {
     height: 100%;
-    width: 100%;
-    display: flex;
-    border-top: 6px solid rgb(252, 49, 49);
-}
-
-.main-wrapper .section2-col1 {
-    width: 50%;
     padding: 25px;
-    font-size: 32px;
-    color: rgb(252, 49, 49);
-    display: flex;
-    align-items: center;
-}
-
-.main-wrapper .section2-box {
-    padding: 25px;
-}
-
-.main-wrapper .section2-col1 h2 {
-    text-align: center;
-    font-style: italic;
-}
-
-.main-wrapper .section2-col1 p {
-    text-align: center;
-}
-
-.main-wrapper .section2-col2 {
-    height: 100%;
-    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: 90px 90px;
-    background-image: linear-gradient(to left, #ededed 1px, transparent 1px), linear-gradient(to bottom, #f6f6f6 1px, transparent 1px);
+    border-top: 6px solid rgb(252, 49, 49);
+    background-image: linear-gradient(to left, #ededed 1px, transparent 1px), linear-gradient(to bottom, #f6f6f6 1px, transparent 6px);
+    background-size: 60px 60px;
+}
+
+.main-wrapper .section2 .section2-box {
+    height: 600px;
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-wrapper .section2 .section2-text-box {
+    text-align: center;
+    position: relative;
+    height: 150px;
+    top: 0;
+    color: rgb(252, 49, 49);
+    padding: 15px;
+}
+
+.main-wrapper .section2 .section2-box .flex-item {
+    height: 600px;
+    width: 600px;
+}
+
+.main-wrapper .section2 .section2-text-box h2 {
+    font-style: italic;
+    font-size: 2em;
+}
+
+.main-wrapper .section2 .section2-text-box p {
+    font-size: 1.2em;
 }
 
 .main-wrapper .section2-box img {
-    height: 700px;
-    width: 700px;
     border-radius: 50%;
+    padding: 15px;
 }
 
 /*Home Section 3 -Social Media*/
@@ -320,7 +320,7 @@ body .main-wrapper {
 
 
 .main-wrapper .section3 .social-media a:hover .fa {
-    font-size: 70px;
+    font-size: 60px;
     transition: .2s;
 } 
 
@@ -335,193 +335,165 @@ body .main-wrapper {
 }
 
 .main-wrapper footer p {
-    margin-left: 50px;
     color: #f6f6f6;
+    padding: 10px;
 }
 
 
 /*Media Queries*/
-@media screen and (max-width: 1920px) {
-    #header .hero-box h1 {
-        font-size: 32px;
+@media screen and (max-width: 1500px) {
+    .main-wrapper .section1 .section1-box .flex-item {
+        height: 400px;
+        width: 500px;
+        font-size: 1em;
     }
 
-    .main-wrapper .section1 .section1-box {
-        width: 600px;
-        height: 500px;
-    }
-    
-    .main-wrapper .section1-col2 p {
-        font-size: 24px;
-    }
-    
-    .main-wrapper .section2-col1 {
-        font-size: 1.2em;
+    .main-wrapper .section1 .section1-box p {
+        flex: 1;
     }
 
-    .main-wrapper .section2-box img {
+}
+
+@media screen and (max-width: 1500px) {
+    .main-wrapper .section2 .section2-box .flex-item {
         height: 500px;
         width: 500px;
     }
 }
 
-@media screen and (max-width: 1400px) {
-    #header .logo svg {
-        height: 50px;
+@media screen and (max-width: 1100px) {
+    #header .main-nav .nav-menu {
+        display: none;
     }
 
-    #header .hero-box h1 {
-        font-size: 24px;
+    #header nav.nav-js {
+        display: none;
     }
 
-    #header .main-nav .nav-menu li a {
-        font-size: 15px;
-    }
-
-    body .main-wrapper {
+    body .main-wrapper { 
         height: 800px;
     }
-
+    
     .main-wrapper .section1 .section1-box {
-        width: 400px;
-        height: 300px;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     }
 
-    .main-wrapper .section1-col2 p {
-        font-size: 18px;
-    }
-
-    .main-wrapper .section2-col1 {
-        font-size: 1em;
-    }
-
-    .main-wrapper .section2-box img {
-        height: 350px;
-        width: 350px;
-    }
-
-    .main-wrapper .section3 .social-media h3 {
-        font-size: 1em;
-    }
-
-    .main-wrapper .section3 .social-media a .fa {
-        font-size: 32px;
-    }
-
-    .main-wrapper .section3 .social-media a:hover .fa {
-        font-size: 45px;
-    }
-
-    .main-wrapper footer p {
-        font-size: 15px;
+    .main-wrapper .section1 .section1-box .flex-item {
+        height: 400px;
+        width: 500px; 
     }
 }
 
 @media screen and (max-width: 1100px) {
-    body .main-wrapper {
-        height: 600px;
+    .main-wrapper .section2 .section2-box {
+        flex-direction: column;
+        height: 100%;
     }
 
-    #header .logo svg {
-        height: 40px;
-    }
-    
     #header .hero-box h1 {
-        font-size: 15px;
+        font-size: 1em;
     }
+}
 
-    /*Hamburger Menu*/
-    #header .toggle-hamburger {
-        display: block;
-    }
-
-    #header .main-nav .nav-menu li a {
-        display: none;
-    }
-
-    #header .main-nav {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    #header .main-nav .active {
-       display: block;
-       height: 375px;
-       width: 300px;
-       line-height: 45px;
-       background: #000000;
-       border-radius: 5px;
-       animation: pull-left 1s forwards;
-    }
-
-    @keyframes pull-left {
-        0% {
-            width: 0;
-        }
-
-        100% {
-            width: 300px;
-        }
-    }
-
-    #header .main-nav .active li a {
-        display: block;
-        color: #fff;
-        border-bottom: solid 1px #fff;
-    }
-
-    #header .logo {
-        position: absolute;
-    }
-
-    #header .logo a svg.fill {
-        fill: #000000;
-        margin-left: 0;
-    }
-
-    #header nav.nav-js {
-        background: none;
-        border: none;
-    }
-
-    #header nav.main-nav ul li a.nav-item-js {
-        height: 75px;
-        padding: 15px;
-    }
-    #header .main-nav .nav-menu li a.nav-item-js:hover {
-        background: none;
-        color: #ff6500;
-        border-radius: 0;
-        transition: .5s;
-    }
-
-    #header .main-nav .nav-menu li a:hover {
-        color: #ff6500;
-    }
-
-    #header .main-nav .nav-menu li a:hover:before {
-       border: none;
-    }
-
-    /*Section 1*/
-    .main-wrapper .section1 .section1-box {
-        width: 300px;
-        height: 250px;
-    }
-
+@media screen and (max-width: 1100px) {
     .main-wrapper .section3 .social-media h3 {
         font-size: 1em;
     }
 
     .main-wrapper .section3 .social-media a .fa {
-        font-size: 32px;
+        font-size: 2em;
     }
 
     .main-wrapper .section3 .social-media a:hover .fa {
-        font-size: 45px;
-    }
-
-    .main-wrapper footer p {
-        font-size: 15px;
+        font-size: 2.5em;
     }
 }
+
+@media screen and (max-width: 1100px) {
+    .main-wrapper footer p {
+        font-size: .6em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #header .logo {
+        height: 50px;
+    }
+
+    #header .logo svg {
+        height: 30px;
+    }
+    
+    #header .hero-box h1 {
+        font-size: .6em;
+    }
+
+    #header .hero-box h1 span {
+        line-height: 7;
+    }
+
+    body .main-wrapper { 
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main-wrapper .section1 .section1-box .flex-item {
+        height: 200px;
+        width: 250px; 
+        font-size: .6em; 
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main-wrapper .section2 .section2-box .flex-item {
+        height: 250px;
+        width: 250px;
+    }
+
+    .main-wrapper .section2 .section2-text-box h2 {
+        font-size: 1.2em;
+    }
+
+    .main-wrapper .section2 .section2-box p {
+        font-size: .6em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main-wrapper .section3 {
+        height: 60px;
+    }
+
+    .main-wrapper .section3 .social-media h3 {
+        font-size: .8em;
+    }
+
+    .main-wrapper .section3 .social-media a .fa {
+        font-size: 1.5em;
+    }
+
+    .main-wrapper .section3 .social-media a:hover .fa {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    #header .logo {
+        padding: 0 5px;
+    }
+
+    #header .logo svg {
+        height: 25px;
+    }
+
+    #header .hero-box h1 {
+        font-size: .4em;
+    }
+}
+
+
+
