@@ -10,24 +10,20 @@ body {
 
 /*Header Showcase*/
 #header {
+    height: 100vh;
     width: 100%;
     position: relative;
     display: flex;
 }
 
 #header .hero-box {
+    background: url('../images/hero.jpg') no-repeat 50% /cover;
     height: 100%;
     width: 100%;
-    z-index: 2;
 }
 
-#header .hero-box img {
-    height: 100%;
-    width: 100%;
-    z-index: 0;
-}
-
-#header .hero-box .overlay {
+#header .hero-box:after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -79,7 +75,7 @@ body {
     line-height: 9;
 }
 
-/*Js class additions for logo & nav*/
+/*Js class additions for Logo & Nav*/
 #header .logo a svg.fill {
     fill: #fff;
     margin-left: 15px;
@@ -147,7 +143,7 @@ body {
     color: #ff6500;
 }
 
-/*Nav border animation*/
+/*Nav Border Animation*/
 #header .main-nav .nav-menu li a:before {
     content: '';
     position: absolute;
@@ -195,7 +191,7 @@ body {
     transition: .5s;
 }
 
-/*Main home page content*/
+/*Main Home Page Content Wrap*/
 body .main-wrapper {
     width: 100%;
     height: 1000px;
@@ -247,7 +243,7 @@ body .main-wrapper {
     align-items: center;
     justify-content: center;
     border-top: 6px solid rgb(252, 49, 49);
-    background-image: linear-gradient(to left, #ededed 1px, transparent 1px), linear-gradient(to bottom, #f6f6f6 1px, transparent 6px);
+    background-image: linear-gradient(to left, #ededed 1px, transparent 1px), linear-gradient(to bottom, #f6f6f6 1px, transparent 1px);
     background-size: 60px 60px;
 }
 
@@ -362,6 +358,10 @@ body .main-wrapper {
 }
 
 @media screen and (max-width: 1100px) {
+    #header .hero-box {
+        background: url('../images/hero.jpg') 80% /cover; 
+    }
+
     #header .main-nav .nav-menu {
         display: none;
     }
@@ -394,7 +394,7 @@ body .main-wrapper {
     }
 
     #header .hero-box h1 {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 }
 
@@ -428,7 +428,9 @@ body .main-wrapper {
     }
     
     #header .hero-box h1 {
-        font-size: .6em;
+       font-size: 1em;
+       padding: 10px;
+       width: 100%;
     }
 
     #header .hero-box h1 span {
@@ -441,10 +443,18 @@ body .main-wrapper {
 }
 
 @media screen and (max-width: 767px) {
+    .main-wrapper .section1 {
+        padding: 0;
+    }
+
+    .main-wrapper .section1 .section1-box {
+        padding: 0;
+    }
+    
     .main-wrapper .section1 .section1-box .flex-item {
         height: 200px;
         width: 250px; 
-        font-size: .6em; 
+        font-size: .8em; 
     }
 }
 
@@ -482,16 +492,8 @@ body .main-wrapper {
 }
 
 @media screen and (max-width: 440px) {
-    #header .logo {
-        padding: 0 5px;
-    }
-
-    #header .logo svg {
-        height: 25px;
-    }
-
     #header .hero-box h1 {
-        font-size: .4em;
+        font-size: .8em;
     }
 }
 
