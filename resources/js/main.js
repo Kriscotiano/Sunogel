@@ -22,10 +22,8 @@ $(window).on('scroll', function() {
     }
 });
 
-
 $(document).ready(function() {
     $('.toggle-hamburger').on('click', function() {
-        $('.main-nav ul').toggleClass('active');
+        $('.main-nav ul').toggleClass('hamburger-active');
     })
 });
-

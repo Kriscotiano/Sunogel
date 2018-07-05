@@ -12,7 +12,6 @@ body {
 #header {
     height: 100vh;
     width: 100%;
-    position: relative;
     display: flex;
     background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)),#3f3f3f;
 }
@@ -92,10 +91,9 @@ body {
 
 #header .logo a svg.fill:hover {
     fill: #ff6500;
-    transition: .1s;
 }
 
-#header nav.nav-js {
+#header .nav-js {
     background: rgba(0,0,0,0.9);
     border-bottom: 3px solid #fff;
     transition: .5s;
@@ -126,8 +124,8 @@ body {
 
 #header .main-nav .nav-menu {
     height: 75px;
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
 }
 
@@ -145,6 +143,11 @@ body {
     display: flex;
     align-items: center;
     transition: .5s;
+}
+
+.test {
+    width: 100%;
+    height: 100%;
 }
 
 #header .main-nav .nav-menu li a:hover {
@@ -183,7 +186,8 @@ body {
 
 
 /*Hamburger Icon*/
-#header .toggle-hamburger {
+#header #hamburger {
+    height: 75px;
     padding: 10px;
     font-size: 25px;
     display: none;
@@ -194,10 +198,6 @@ body {
     cursor: pointer;
 }
 
-#header .fa-bars:hover {
-    color: #ff6500;
-    transition: .5s;
-}
 
 /*Main Home Page Content Wrap*/
 body .main-wrapper {
@@ -366,16 +366,63 @@ body .main-wrapper {
 }
 
 @media screen and (max-width: 1100px) {
+    #header .logo {
+        position: absolute;
+        left: 0;
+    }
+
+    #header .nav-js .logo {
+        visibility: hidden;
+    }
+
     #header .hero-box {
         background: url('../images/hero.jpg') 80% /cover; 
     }
 
-    #header .main-nav .nav-menu {
-        display: none;
+    #header .main-nav {
+        display: flex;
+        justify-content: flex-end;
     }
 
-    #header nav.nav-js {
-        display: none;
+    #header .main-nav .nav-menu li a {
+        color: #fff;
+        font-size: .8em;
+    }
+
+    #header .main-nav .nav-menu {
+        display: block;
+        height: 372px;
+        width: 0;
+        line-height: 45px;
+        background: #000000;
+        border-radius: 5px;
+        transition: .5s;
+    }
+    
+    #header .main-nav .hamburger-active {
+        display: block;
+        height: 372px;
+        width: 300px;
+        line-height: 45px;
+        background: #000000;
+        border-radius: 5px;
+        transition: .5s;
+    }
+
+    #header #hamburger {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+
+    #header .nav-js {
+        background: transparent;
+        border: none;
+    }
+
+    #header .logo a svg.fill {
+        fill: transparent;
     }
 
     body .main-wrapper { 
@@ -433,6 +480,11 @@ body .main-wrapper {
 
     #header .logo svg {
         height: 30px;
+    }
+
+    #header #hamburger {
+        font-size: 20px;
+        height: 45px;
     }
     
     #header .hero-box h1 {
