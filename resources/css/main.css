@@ -54,10 +54,6 @@ body {
     align-items: center;
 }
 
-#header .logo a svg:hover {
-    fill: #ff6500;
-}
-
 /*Hero*/
 #header .hero-box h1 {
     position: absolute;
@@ -69,15 +65,16 @@ body {
     font-weight: 500;
     font-size: 1.6em;
     min-width: 550px;
+    display: none;
 }
 
 #header .hero-box h1 span {
     color: #ff6500;
     text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
     -1px 1px 0 #000,
-    1px 1px 0 #000;
+    1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
     font-weight: 600;
     display: none;
 }
@@ -87,10 +84,6 @@ body {
     fill: #fff;
     margin-left: 15px;
     transition: .5s;
-}
-
-#header .logo a svg.fill:hover {
-    fill: #ff6500;
 }
 
 #header .nav-js {

@@ -33,10 +33,11 @@ $(document).ready(function() {
 
 //Hero Text Event
 $(document).ready(function() {
+    $('#header .hero-box h1').slideDown(3000);
     function fadeSpan() {
-        $('#header .hero-box h1 span').fadeIn(2000);
+        $('#header .hero-box h1 span').fadeIn(3000);
     }
-    setTimeout(fadeSpan, 6000); 
+    setTimeout(fadeSpan, 9000); 
 });
 
 
@@ -44,7 +45,6 @@ $(document).ready(function() {
 $(document).ready(function() {
     $(window).scroll(function() {
         let positionTop = $(document).scrollTop();
-        console.log(positionTop);
 
         if ((positionTop > 500) && (positionTop < 1200)) {
             $('.main-wrapper .section1 .section1-box .hide').removeClass('hide');
