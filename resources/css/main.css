@@ -70,7 +70,7 @@ body {
 
 #header .hero-box h1 span {
     color: #ff6500;
-    text-shadow: 1px 1px 1px #000000, 9px 0px 0px rgba(0,0,0,0.15);
+    text-shadow: 1px 1px 1px #000000, 0px 0px 0px rgba(0,0,0,0.15);
     font-weight: 600;
     display: none;
 }
