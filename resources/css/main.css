@@ -70,11 +70,7 @@ body {
 
 #header .hero-box h1 span {
     color: #ff6500;
-    text-shadow:
-    -1px 1px 0 #000,
-    1px 1px 0 #000,
-    1px -1px 0 #000,
-    -1px -1px 0 #000;
+    text-shadow: 1px 1px 1px #000000, 9px 8px 0px rgba(0,0,0,0.15);
     font-weight: 600;
     display: none;
 }
@@ -198,7 +194,7 @@ body .main-wrapper {
 /*Home Section 1*/
 .main-wrapper .section1 {
     height: 100%;
-    border-top: solid 6px #ff6500;
+    border-top: solid 3px #ff6500;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -247,7 +243,7 @@ body .main-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 6px solid rgb(252, 49, 49);
+    border-top: 3px solid rgb(252, 49, 49);
     background-image: linear-gradient(to left, #ededed 1px, transparent 1px), linear-gradient(to bottom, #f6f6f6 1px, transparent 1px);
     background-size: 60px 60px;
 }
